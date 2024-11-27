@@ -13,7 +13,6 @@ const ContentBody = () => {
 
   return (
     <section id="content-body">
-      
       <div className="body-part-1">
         <div className="developer-intro">
           <p>Full-Stack Developer</p>
@@ -30,26 +29,27 @@ const ContentBody = () => {
         </div>
       </div>
       <div className="body-part-2">
+        <div className="background-circle"></div>
         <div className="hoodie-guy"></div>
         <div className="circle">
           {[
-            "flutter",
-            "python",
-            "adobe-photoshop",
-            "django",
-            "adobe-premiere-pro",
-            "html-5",
-            "figma",
-            "css3",
-            "javascript",
-            "adobe-illustrator",
-            "dart",
-            "PostgreSQL-Dark",
-            "MySQL-Dark",
-            "Firebase-Dark",
-            "Github-Dark",
+            'flutter',
+            'python',
+            'adobe-photoshop',
+            'django',
+            'adobe-premiere-pro',
+            'html-5',
+            'figma',
+            'css3',
+            'javascript',
+            'adobe-illustrator',
+            'dart',
+            'PostgreSQL-Dark',
+            'MySQL-Dark',
+            'Firebase-Dark',
+            'Github-Dark',
           ].map((icon, index) => (
-            <span key={index} style={{ "--i": index + 1 }}>
+            <span key={index} style={{ '--i': index + 1 }}>
               <img
                 src={`/assets/SVGIcons/${icon}.svg`}
                 height="75px"
@@ -58,11 +58,9 @@ const ContentBody = () => {
             </span>
           ))}
         </div>
-        <div className="background-circle"></div>
       </div>
     </section>
   );
 };
 
 export default ContentBody;
-    

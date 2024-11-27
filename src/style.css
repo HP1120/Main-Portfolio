@@ -238,31 +238,29 @@ body::selection {
 /* ---------- SECTION BODY CONTENT ---------- */
 #content-body {
   display: flex;
+  flex-direction: row; /* Arrange content and image side by side */
   background-color: #2d2e32;
-  align-items: flex-start;
-  height: 90vh;
-  align-content: center;
-  align-items: center;
-  justify-content: space-around;
-  padding: 100px 0 0 100px;
-  margin-bottom: 10vh;
-  max-height: 100vh;
+  height: 100vh; /* Full viewport height */
+  align-items: center; /* Vertically align items */
+  justify-content: space-between; /* Space out content and image */
+  padding: 0 50px; /* Add some horizontal padding */
 }
 
+/* Developer intro section */
 .developer-intro {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .developer-intro p {
   padding: 5px 10px;
-  margin: 0 20px 0 0;
+  margin: 0 10px 0 0; /* Space between badges */
   background-color: #64f4ac;
   color: #2d2e32;
   font-size: 13px;
   font-weight: 600;
   border-radius: 2.5px;
-  align-items: center;
   text-align: center;
   transition: 0.3s ease;
   cursor: pointer;
@@ -272,45 +270,43 @@ body::selection {
   font-weight: 900;
 }
 
+/* Body title styles */
+.body-title {
+  text-align: left; /* Align text to the left */
+}
+
 .body-title h1 {
   font-size: 40px;
   line-height: 50px;
   letter-spacing: -1.5px;
-  padding: 35px 0 0 0;
+  margin: 0;
 }
 
 .body-title p {
   font-size: 12px;
-  padding: 20px 0;
   color: #cacaca;
   font-weight: 500;
   line-height: 25px;
+  margin: 20px 0;
 }
 
 .body-title a {
   font-size: 16px;
   color: #64f4ac;
   font-weight: 600;
-  padding: 20px 0;
-  margin: 20px 0;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.body-tail {
-  display: flex;
-  align-items: start;
-  padding: 100px 0 0 0;
+/* Left column styles */
+.body-part-1 {
+  width: 50%; /* Take half the width for content */
 }
 
-.body-tail p {
-  color: #cacaca;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 0 40px 0 5px;
-}
-
+/* Right column styles (image section) */
 .body-part-2 {
   position: relative;
-  height: 100%; /* Ensure the section holds all elements */
+  width: 50%; /* Take half the width for image and circle */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -343,7 +339,7 @@ body::selection {
   transform: translate(-50%, -50%); /* Center the hoodie image */
 }
 
-/* Rotating circle around the image */
+/* Rotating circle */
 .circle {
   position: absolute;
   top: 50%;
@@ -356,7 +352,7 @@ body::selection {
   z-index: 3; /* Place it above the hoodie image */
 }
 
-/* Keyframe animation for rotating the circle around the image */
+/* Keyframe animation */
 @keyframes animateCircle {
   0% {
     transform: translate(-50%, -50%) perspective(1000px) rotateY(0deg) rotateX(15deg);
@@ -366,7 +362,7 @@ body::selection {
   }
 }
 
-/* Icon container inside the rotating circle */
+/* Icon container */
 .circle span {
   position: absolute;
   top: 0;
@@ -381,7 +377,7 @@ body::selection {
   transform: rotateY(calc(var(--i) * calc(360deg / 15))) translateZ(300px);
 }
 
-/* Icon images inside the rotating circle */
+/* Icon images */
 .circle span img {
   position: relative;
   top: 12px;
@@ -389,14 +385,16 @@ body::selection {
   object-fit: cover;
 }
 
-
-.sota{
+/* Text styles */
+.sota {
   font-size: 40px;
   line-height: 50px;
   letter-spacing: -1.5px;
-  padding: 35px 0 0 0;
   color: whitesmoke;
+  margin: 0;
 }
+
+
 /* Introduction Section */
 .introduction {
   display: flex;
